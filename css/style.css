@@ -11,7 +11,7 @@ h1 {
 	font-size: 60px;
 	font-weight: normal;
 	margin: 0;
-    font-family: 'Chelsea Market', Georgia, serif;
+    font-family: 'Walter Turncoat', Georgia, serif;
     color: #000;
 	line-height: 1;
 }
@@ -21,7 +21,7 @@ h2 {
 	font-weight: normal;
 	margin: 0;
 	color: #FFB000;
-    font-family: 'Chelsea Market', Georgia, serif;
+    font-family: 'Walter Turncoat', Georgia, serif;
 	text-transform: lowercase;
 }
 
@@ -99,21 +99,24 @@ code {
 .block-title h2 { color: #000; }
 .block-title .meta { font-size: 16px; color: #999; }
 .block-title .meta a { font-size: 16px; color: #333; }
-.block-setup { background-color: #348fd4; }
-.block-setup h2 { color: #06406c; }
+.block-setup { background-color: #FFF588; }
+.block-setup h2 { color: #611C1C; }
 .block-setup h2 a { background: none; padding: 0; font-size: normal; }
-.block-setup a { color: #FFF; font-size: 40px; font-weight: normal;font-style: normal; background-color: #06406c; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
+.block-setup a { color: #FFF; font-size: 40px; font-weight: normal;font-style: normal; background-color: #E0B818; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
 .block-setup a:hover { text-decoration: underline; }
-.block-create { background-color: #06406c; }
+.block-create { background-color: #60837D; }
 .block-create h2 { color: #FFF; }
 .block-create p { color: #FFF; }
 .block-create code { background-color: #000; color: #FFF; }
-.block-checkout { background-color: #FFF; }
-.block-checkout h2 { color: #000; }
-.block-trees { background-color: #4c0d09; }
-.block-trees h2 { color: #d3b2af; }
-.block-trees p { color: #d3b2af; }
-.block-trees code { color: #000; background-color: white; }
+.block-hackage { background-color: #fff8c9; }
+.block-hackage h2 { color: #2d2700; }
+.block-hackage p { color: #615400; }
+.block-install { background-color: #eee; }
+.block-install h2 { color: #F56B6B; }
+.block-build { background-color: #7A0E07; }
+.block-build h2 { color: #d3b2af; }
+.block-build p { color: #d3b2af; }
+.block-build code { color: #000; background-color: white; }
 .block-add { background-color: #cc4037; }
 .block-add h2, .block-add p { color: #4c0d09; }
 .block-remote { background-color: #ffc19f; }
@@ -139,9 +142,6 @@ code {
 .block-hints h2 { color: #FFF; }
 .block-hints p { color: #FFF; }
 .block-hints code { background-color: #000; color: #FFF; }
-.block-checkout-replace { background-color: #fff8c9; }
-.block-checkout-replace h2 { color: #2d2700; }
-.block-checkout-replace p { color: #615400; }
 .block-comments { background-color: #FFF; padding-bottom: 50px; font-size: 14px; color: #000; }
 .block-comments h2 { color: #000; }
 .block-comments h3 { font-size: 16px; }
