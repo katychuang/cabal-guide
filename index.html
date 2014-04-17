@@ -7,6 +7,8 @@
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://apis.google.com/js/plusone.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-XXXXXXX-XX']);
@@ -30,6 +32,13 @@
         <p>just a simple guide for getting started with cabal.</p>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="katychuang" data-size="large" data-url="http://katychuang.com/cabal-guide" data-related="rogerdudler" data-hashtags="git">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div id="commentscounter"></div>
+        <script>
+        gapi.commentcount.render('commentscounter', {
+            href: window.location
+        });
+        </script>
+
         <p class="meta">
             by <a href="http://www.twitter.com/katychuang">katychuang</a>
             <br />
@@ -152,23 +161,22 @@
             </ul>
         </p>
     </div>
-    <a name="comments"></a>
-    <div class="scrollblock block-comments">
-        <h2>comments</h2>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'katychuang'; // required: replace example with your forum shortname
 
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
+    <div id="comments"></div>
+
+
+        <script>
+          gapi.comments.render('comments', {
+              href: window.location,
+              width: '650',
+              first_party_property: 'BLOGGER',
+              view_type: 'FILTERED_POSTMOD'
+          });
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
 
+    <div class="footer">
+        <small><a href="https://plus.google.com/+KatherineChuang?rel=author">&copy; Katherine Y. Chuang, Ph.D.</a></small>
+        </p>
+    </div>
 </body>
 </html>
