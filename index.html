@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="@katychuang | Kat Y. Chuang, Ph.D.">
 	<title>cabal - the simple guide</title>
     <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -26,6 +27,23 @@
     </script>
 </head>
 <body>
+    <div class="navbar navbar-fixed-top"  role="navigation">
+        <div class="navbar-inner">
+            <ul class="nav navbar-nav">
+                <li><a href="#setup" class="header">setup</a></li>
+                <li><a href="#create" class="header">create</a></li>
+                <li><a href="#hackage" class="header">hackage</a></li>
+                <li><a href="#install" class="header">dependencies</a></li>
+                <li><a href="#build" class="header">build</a></li>
+                <li><a href="#freeze" class="header">freeze</a></li>
+                <li><a href="#repl" class="header">repl</a></li>
+                <li><a href="#hints" class="header">hints</a></li>
+                <li><a href="#resources" class="header">links</a></li>
+            </ul>
+        </div>
+    </div>
+
+
     <div class="scrollblock block-title">
         <h1>cabal - the simple guide</h1>
         <p>just a simple guide for getting started with cabal.</p>
@@ -51,8 +69,8 @@
         <img src="img/arrow.png" alt="" />
     </div>
     <!-- setup -->
-    <a name="setup"></a>
-    <div class="scrollblock block-setup">
+
+    <div class="scrollblock block-setup" id="setup">
         <h2>1. Installation</h2>
         <p>
             Download Cabal and cabal-install <br />
@@ -61,12 +79,12 @@
         <p>
             You'll need the latest versions of both.<br />
             <code>cabal --version</code><br />
-                cabal-install version 1.18.0.3<br />
-                using version 1.18.1.3 of the Cabal library <br />
+                cabal-install version 1.20.0.2<br />
+                using version 1.20.0.1 of the Cabal library <br />
         </p>
     </div>
-    <a name="create"></a>
-    <div class="scrollblock block-create">
+
+    <div class="scrollblock block-create" id="create">
         <h2>2. create a sandbox</h2>
         <p>
             create a new directory, open it and type <br />
@@ -75,16 +93,17 @@
             of your current folder <code>.cabal-sandbox</code>
         </p>
     </div>
-    <a name="hackage"></a>
-    <div class="scrollblock hackage">
+
+    <div class="scrollblock block-hackage" id="hackage">
         <h2>3. hackage package list</h2>
         <p>
             update your local list of packages and dependencies, with<br />
-            <code>cabal update</code>
+            <code>cabal update</code><br />
+            this will get the newest versions listed on <a href="http://hackage.haskell.org/">Hackage</a>
         </p>
     </div>
-    <a name="install"></a>
-    <div class="scrollblock block-install">
+
+    <div class="scrollblock block-install" id="install">
         <h2>4. external dependencies</h2>
         <p>
             create a copy of a package by running the command<br />
@@ -95,8 +114,8 @@
              --dry-run to see what cabal plans to do (recommended)
         </p>
     </div>
-    <a name="build"></a>
-    <div class="scrollblock block-build">
+
+    <div class="scrollblock block-build" id="build">
         <h2>5. build application</h2>
         <p>
             your sandbox consists of specific local version of packages you've just added and your project can be built with<br />
@@ -107,47 +126,28 @@
         </p>
         <!--img src="img/trees.png" alt="" /-->
     </div>
-    <!--a name="add"></a>
-    <div class="scrollblock block-add">
-        <h2>&nbsp;</h2>
+
+
+
+    <div class="scrollblock block-freeze" id="freeze">
+        <h2>6. Freeze</h2>
         <p>
-            &nbsp;
+            Introduced in Cabal version 1.20 <br />
+            <code>cabal freeze</code> <br />
+            is useful when building an application. <br />
+            It produces a list of packages with their version numbers.
         </p>
     </div>
-    <a name="push"></a>
-    <div class="scrollblock block-remote">
-        <h2>&nbsp;</h2>
-        <p>
-            &nbsp;
+
+    <div class="scrollblock block-repl" id="repl">
+        <h2>7. Repl</h2>
+        <p>You can play around with the code in GHCi:<br />
+            <code>cabal repl</code> <br />
+            This is much faster than rebuilding the executable<br /> after every single change.
         </p>
     </div>
-    <a name="branching"></a>
-    <div class="scrollblock block-branching">
-        <h2>&nbsp;</h2>
-        <p>
-            &nbsp;
-        </p>
-        <!--img src="img/branches.png" alt="" /--
-        <p>
-            &nbsp;
-        </p>
-    </div>
-    <a name="update"></a>
-    <div class="scrollblock block-merging">
-        <h2>&nbsp;</h2>
-        <p>
-            &nbsp;
-        </p>
-    </div>
-    <a name="tagging"></a>
-    <div class="scrollblock block-tagging">
-        <h2>&nbsp;</h2>
-        <p>
-            &nbsp;
-        </p>
-    </div-->
-    <a name="hints"></a>
-    <div class="scrollblock block-hints">
+
+    <div class="scrollblock block-hints" id="hints">
         <h2>useful hints</h2>
         <p>
             attaching patched or an unreleased version of a library<br />
@@ -158,8 +158,8 @@
             <code>rm -rf .cabal-sandbox cabal.sandbox.config</code><br />
         </p>
     </div>
-    <a name="resources"></a>
-    <div class="scrollblock block-resources">
+
+    <div class="scrollblock block-resources" id="resources">
         <h2>links & resources</h2>
         <h3>guides</h3>
         <p>
@@ -183,6 +183,24 @@
               view_type: 'FILTERED_POSTMOD'
           });
         </script>
+
+        <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+        </script>
+
 
     <div class="footer">
         <small><a href="https://plus.google.com/+KatherineChuang?rel=author">&copy; Katherine Y. Chuang, Ph.D.</a></small>

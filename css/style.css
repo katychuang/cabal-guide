@@ -80,6 +80,82 @@ code {
     font-family: menlo, monospace;
 }
 
+.navbar {
+    padding: 10px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.navbar:before, .navbar:after {
+    display: table;
+    content: " ";
+}
+
+.navbar-fixed-top {
+    top: 0;
+    z-index: 1030;
+    position: fixed;
+    right: 0;
+    left: 0;
+    border-width: 0 0 1px;
+}
+
+.navbar {
+    min-height: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.navbar .navbar-inner {
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -khtml-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: 0;
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    padding: 10px 30px 10px 30px !important;
+    display: block;
+}
+
+.navbar-nav > li {
+    /*float: left;*/
+}
+
+ul.nav{
+    margin:0;
+    float:left;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.navbar .navbar-inner .nav a.header {
+    text-shadow: none;
+    outline: none !important;
+    color: #CACBCC;
+    font-size: 13px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    line-height: 14px;
+}
+
+
+
 /*----------------------------------------  BLOCKS */
 
 .scrollblock {
@@ -111,20 +187,19 @@ code {
 .block-hackage { background-color: #fff8c9; }
 .block-hackage h2 { color: #2d2700; }
 .block-hackage p { color: #615400; }
+.block-hackage a { color: #615400; font-size: 40px; font-weight: normal;font-style: normal; background-color: #E0B818; padding: 10px 15px; border-radius: 10px; text-decoration: none; }
 .block-install { background-color: #eee; }
 .block-install h2 { color: #F56B6B; }
 .block-build { background-color: #7A0E07; }
 .block-build h2 { color: #d3b2af; }
 .block-build p { color: #d3b2af; }
 .block-build code { color: #000; background-color: white; }
-.block-add { background-color: #cc4037; }
-.block-add h2, .block-add p { color: #4c0d09; }
-.block-remote { background-color: #ffc19f; }
-.block-remote h2 { color: #cc4037; }
-.block-branching { background-color: #000; }
-.block-branching h2 { color: #FFF; }
-.block-branching p { color: #DDD; }
-.block-branching code { color: #000; background-color: white; }
+.block-freeze { background-color: #cc4037; }
+.block-freeze h2, .block-freeze p { color: #4c0d09; }
+.block-repl { background-color: #000; }
+.block-repl h2 { color: #FFF; }
+.block-repl p { color: #DDD; }
+.block-repl code { color: #000; background-color: white; }
 .block-merging { background-color: #F2F2F2; }
 .block-merging h2 { color: #666; }
 .block-tagging { background-color: #F2F2F2; }
@@ -133,7 +208,7 @@ code {
 .block-hints h2 { color: #FFF; }
 .block-hints p { color: #FFF; }
 .block-hints code { background-color: #000; color: #FFF; }
-.block-resources { background-color: #ffc19f; }
+.block-resources { background-color: #FCF4E1; }
 .block-resources h2 { color: #cc4037; }
 .block-resources h3 { color: #7d1f19; }
 .block-resources ul { list-style: disc; margin: 0; padding: 0; }
