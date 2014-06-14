@@ -81,7 +81,7 @@ code {
 }
 
 .navbar {
-    padding: 10px 0;
+    padding: 0;
     border-bottom: 0;
     letter-spacing: 1px;
     background: 0 0;
@@ -99,15 +99,15 @@ code {
     top: 0;
     z-index: 1030;
     position: fixed;
-    right: 0;
+    font-size:12px;
     left: 0;
     border-width: 0 0 1px;
+    width:100px;
 }
 
 .navbar {
     min-height: 20px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .navbar .navbar-inner {
@@ -121,14 +121,23 @@ code {
     -moz-box-shadow: none !important;
     box-shadow: none !important;
     border-bottom: none !important;
-    padding: 10px 30px 10px 30px !important;
+    padding: 0 !important;
     display: block;
 }
 
-.navbar-nav > li {
-    /*float: left;*/
+ul.hover{
+    padding:0;
+    margin:0;
 }
 
+.hoverlist{
+    background:#eee;
+    border-bottom:1px solid #ddd;
+    padding:5px 0;
+    width: 100px;
+    cursor: pointer;
+    color: #333;
+}
 ul.nav{
     margin:0;
     float:left;
@@ -154,6 +163,27 @@ ul.nav{
     line-height: 14px;
 }
 
+.file_menu {
+    display:none;
+    padding-left:0;
+}
+
+.file_menu li{
+    width:100px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.file_menu li a {
+    text-decoration:none;
+    padding:5px 10px;
+    display:block;
+}
+
+.file_menu li a:hover {
+    padding:5px 10px;
+    font-weight:bold;
+}
 
 
 /*----------------------------------------  BLOCKS */

@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-
+    <script src="js/jquery-1.7.1.min.js"></script>
     <script src="https://apis.google.com/js/plusone.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -29,7 +29,10 @@
 <body>
     <div class="navbar navbar-fixed-top"  role="navigation">
         <div class="navbar-inner">
-            <ul class="nav navbar-nav">
+            <ul class="hover">
+                <li class="hoverlist">Menu
+                    <span style="float:right">&#x25BC;&nbsp;</span>
+            <ul class="nav navbar-nav file_menu">
                 <li><a href="#setup" class="header">setup</a></li>
                 <li><a href="#create" class="header">create</a></li>
                 <li><a href="#hackage" class="header">hackage</a></li>
@@ -39,6 +42,8 @@
                 <li><a href="#repl" class="header">repl</a></li>
                 <li><a href="#hints" class="header">hints</a></li>
                 <li><a href="#resources" class="header">links</a></li>
+            </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -198,6 +203,13 @@
               }
             }
           });
+
+          $(".hoverlist").hover(function () {
+            $('ul.file_menu').slideDown('medium');
+            }, function () {
+            $('ul.file_menu').slideUp('medium');
+          });
+
         });
         </script>
 
