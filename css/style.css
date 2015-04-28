@@ -277,3 +277,8 @@ ul.nav{
 .announcement img {
     border-radius: 4px;
 }
+
+.footer{
+    font-size: 12px;
+    margin:20px auto;
+}
